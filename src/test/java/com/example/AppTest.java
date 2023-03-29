@@ -7,9 +7,9 @@ public class AppTest {
 
     @Test
     public void testTC1() {
-        char[] inputArray = { 'a', 'b', 'c' };
+        char[] inputArray = { 'a', 'x', 'x', 'x' };
         char targetCharacter = 'x';
-        assertEquals(0, App.countNumOfCharOccurrences(inputArray, targetCharacter));
+        assertEquals(3, App.countNumOfCharOccurrences(inputArray, targetCharacter));
     }
 
     @Test
@@ -21,49 +21,63 @@ public class AppTest {
 
     @Test
     public void testTC3() {
-        char[] inputArray = { 'a', 'b', 'c', 'x', 'y', 'z', 'x' };
+        char[] inputArray = { 'x' };
         char targetCharacter = 'x';
-        assertEquals(2, App.countNumOfCharOccurrences(inputArray, targetCharacter));
+        assertEquals(1, App.countNumOfCharOccurrences(inputArray, targetCharacter));
     }
 
     @Test
     public void testTC4() {
-        char[] inputArray = { 'a', 'b', 'c' };
+        char[] inputArray = { 'a', 'b', 'x' };
         char targetCharacter = 'x';
-        assertEquals(0, App.countNumOfCharOccurrences(inputArray, targetCharacter));
+        assertEquals(1, App.countNumOfCharOccurrences(inputArray, targetCharacter));
     }
 
     @Test
     public void testTC5() {
-        char[] inputArray = { 'a', 'x', 'x' };
+        char[] inputArray = { 'a', 'x' };
         char targetCharacter = 'x';
-        assertEquals(2, App.countNumOfCharOccurrences(inputArray, targetCharacter));
+        assertEquals(1, App.countNumOfCharOccurrences(inputArray, targetCharacter));
     }
 
     @Test
     public void testTC6() {
-        char[] inputArray = { 'a', 'b', 'x', 'c', 'x' };
-        char targetCharacter = 'x';
-        assertEquals(2, App.countNumOfCharOccurrences(inputArray, targetCharacter));
-    }
-
-    @Test
-    public void testTC7() {
-        char[] inputArray = { 'a', 'b', 'c' };
+        char[] inputArray = {};
         char targetCharacter = 'x';
         assertEquals(0, App.countNumOfCharOccurrences(inputArray, targetCharacter));
     }
 
     @Test
+    public void testTC7() {
+        char[] inputArray = { 'a', 'x' };
+        char targetCharacter = 'x';
+        assertEquals(1, App.countNumOfCharOccurrences(inputArray, targetCharacter));
+    }
+
+    @Test
     public void testTC8() {
-        char[] inputArray = { 'a', 'x', 'x' };
+        char[] inputArray = { 'x' };
+        char targetCharacter = 'x';
+        assertEquals(1, App.countNumOfCharOccurrences(inputArray, targetCharacter));
+    }
+
+    @Test
+    public void testTC9() {
+        char[] inputArray = { 'x', 'x' };
         char targetCharacter = 'x';
         assertEquals(2, App.countNumOfCharOccurrences(inputArray, targetCharacter));
     }
 
     @Test
-    public void testTC9() {
-        char[] inputArray = { 'a', 'b', 'x', 'c', 'x' };
+    public void testTC10() {
+        char[] inputArray = { 'x', 'f', 'x' };
+        char targetCharacter = 'x';
+        assertEquals(2, App.countNumOfCharOccurrences(inputArray, targetCharacter));
+    }
+
+    @Test
+    public void testTC11() {
+        char[] inputArray = { 'x', 'x' };
         char targetCharacter = 'x';
         assertEquals(2, App.countNumOfCharOccurrences(inputArray, targetCharacter));
     }
